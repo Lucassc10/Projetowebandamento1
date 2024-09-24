@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Maestria</title>
+    <link rel="stylesheet" href="{% static 'styles/style2.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'index' %}" class="logo">
+            <img src="{% static 'assets/img/logo1.png' %}" alt="logo">
+        </a>
+        <h1>Nossos Serviços</h1>
+        <nav class="menu-lateral__navegacao">
+            <a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/icons8-casa-25.png' %}"> Home</a>
+            <a href="{% url 'sobre' %}"><img src="{% static '/assets/ícones/1x/icons8-olho-25.png' %}"> Sobre nós</a>
+            <a href="{% url 'servicos' %}"><img src="{% static '/assets/ícones/1x/icons8-serviços-25.png' %}"> Serviços</a>
+            <a href="{% url 'register' %}"><img src="{% static '/assets/ícones/1x/icons8-cadastro-25.png' %}"> Cadastro</a>
+            <a href="{% url 'contato' %}"><img src="{% static '/assets/ícones/1x/icons8-e-mail-25.png' %}"> Contato</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+            <p>Oferecemos uma gama completa de serviços de automação residencial, desde iluminação inteligente até sistemas de segurança avançados.</p>
+            <div class="card-container">
+                <div class="card">
+                    <img src="{% static 'assets/img/sala_auto.webp' %}" alt="Iluminação Inteligente" class="card-image">
+                    <h3>Iluminação Inteligente</h3>
+                    <p>Transforme sua casa com controle de iluminação por aplicativo.</p>
+                    <button onclick="window.location.href='#'">Solicitar Orçamento</button>
+                </div>
+                <div class="card">
+                    <img src="{% static 'assets/img/camera.jpg' %}" alt="Sistemas de Segurança" class="card-image">
+                    <h3>Sistemas de Segurança</h3>
+                    <p>Proteja sua casa com câmeras e alarmes inteligentes.</p>
+                    <button onclick="window.location.href='#'">Solicitar Orçamento</button>
+                </div>
+                <div class="card">
+                    <img src="{% static 'assets/img/controle-temperatura.jpg' %}" alt="Controle de Climatização" class="card-image">
+                    <h3>Controle de Climatização</h3>
+                    <p>Gerencie o clima da sua casa de forma eficiente e inteligente.</p>
+                    <button onclick="window.location.href='#'">Solicitar Orçamento</button>
+                </div>
+                <div class="card">
+                    <img src="{% static 'assets/img/automacao.jpeg' %}" alt="Automação de Cortinas" class="card-image">
+                    <h3>Automação de Cortinas</h3>
+                    <p>Abra e feche suas cortinas com um toque no celular.</p>
+                    <button onclick="window.location.href='#'">Solicitar Orçamento</button>
+                </div>
+            </div>
+            <p>Entre em contato conosco para mais informações sobre nossos serviços!</p>
+        </section>
+    </div>
+    
+
+    <footer class="rodape">
+        <div class="rodape__icones">
+            <a href="#" target=”_blank” >
+                <img src="{% static '/assets/ícones/1x/facebook.png' %}" alt="ícone twitter">
+            </a>
+            <a href="#" target=”_blank” >
+                <img src="{% static '/assets/ícones/1x/instagram.png' %}" alt="ícone instagram">
+            </a>
+            <a href="#" target=”_blank” >
+              <img src="{% static '/assets/ícones/1x/icons8-whatsapp-22.png' %}" alt="ícone whatsapp">
+          </a>
+        </div>
+        <p class="rodape__texto">© 2024 Maestria. Todos os direitos reservados</p>
+    </footer>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

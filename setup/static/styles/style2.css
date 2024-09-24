@@ -1,0 +1,356 @@
+/* Estilo para o cabeçalho */
+header {
+    background-color: #005f83;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 70px; /* Altura padrão do cabeçalho */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+/* Estilo para o título do cabeçalho */
+header h1 {
+    margin: 0;
+    text-align: center;
+    flex: 1;
+    font-size: 24px;
+}
+
+/* Garantir que a logo e o menu fiquem espaçados */
+header .logo {
+    margin-right: auto;
+}
+
+header .menu {
+    margin-left: auto;
+}
+
+/* Ajustar o conteúdo principal para não ficar coberto pelo header */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    padding-top: 80px; /* Ajusta o padding superior para caber o cabeçalho */
+    display: flex;
+    flex-direction: column; /* Adiciona flex-direction para colocar o conteúdo em coluna */
+    justify-content: space-between; /* Espaça o conteúdo */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
+}
+
+.carousel-image {
+    width: 1000px; /* Defina a largura desejada */
+    height: 400px; /* Defina a altura desejada */
+    object-fit: cover; /* Mantém a proporção da imagem e cobre o espaço definido */
+    align-items: center;
+}
+
+.carousel-container {
+    width: 1000px; /* Defina a largura desejada */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+}
+
+.btn-conheca-servicos {
+    display: inline-block; /* Faz com que o link se comporte como um bloco */
+    padding: 12px 24px; /* Estilo de botão */
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+.btn-conheca-servicos:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+
+
+
+/* Menu lateral */
+nav.menu-lateral__navegacao {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    max-width: calc(100% - 40px);
+}
+
+nav.menu-lateral__navegacao a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+nav.menu-lateral__navegacao ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.menu-lateral__navegacao li {
+    display: inline-block;
+}
+
+/* Ajuste da cor e estilo ao passar o mouse */
+nav.menu-lateral__navegacao a:hover {
+    color: #f0f8ff;
+    text-decoration: underline;
+}
+
+.C-title {
+    text-align: center;
+}
+
+/* Formulário */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 30px auto; /* Centraliza o formulário horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Garante que o conteúdo interno também fique centralizado */
+}
+
+/* Inputs do formulário */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.3);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Botão de envio */
+input[type="submit"],
+button.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustar link e espaçamento */
+a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Botão */
+button {
+    background-color: #005f83;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #003f57;
+}
+
+/* Ajustes de responsividade para telas menores */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    body {
+        padding-top: 120px; /* Ajusta o padding superior para telas menores */
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card-image {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px 8px 0 0; /* Arredonda os cantos superiores da imagem */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+.card button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.card button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+}
+
+/* Seção Sobre Nós */
+#sobre-nos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#sobre-nos img {
+    max-width: 200px; /* Ajuste a largura máxima da imagem */
+    max-height: 150px; /* Ajuste a altura máxima da imagem */
+    width: auto; /* Manter a proporção */
+    height: auto; /* Manter a proporção */
+    margin-bottom: 20px;
+}
+
+#sobre-nos p {
+    max-width: 800px;
+    margin: 10px 0;
+}
+
+/* Estilos para o rodapé */
+.rodape {
+    background-color: #005f83;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+    position: relative; /* Certifique-se de que está no fluxo do documento */
+    margin-top: 20px; /* Aumenta o espaço acima do rodapé */
+}
+
+
+/* Estilo para os ícones sociais */
+.rodape__icones {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodape__texto {
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 600px) {
+    .rodape {
+        padding: 15px 0; /* Menos espaçamento em telas pequenas */
+    }
+}

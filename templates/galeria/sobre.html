@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Maestria</title>
+    <link rel="stylesheet" href="{% static 'styles/style2.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'index' %}" class="logo">
+            <img src="{% static '/assets/img/logo1.png' %}" alt="Logo Maestria">
+        </a>
+        <div class="menu-toggle" id="menu-toggle"></div>
+        <h1>Sobre Nós</h1>
+        <nav class="menu-lateral__navegacao">
+            <a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/icons8-casa-25.png' %}"> Home</a>
+            <a href="{% url 'sobre' %}"><img src="{% static '/assets/ícones/1x/icons8-olho-25.png' %}"> Sobre nós</a>
+            <a href="{% url 'servicos' %}"><img src="{% static '/assets/ícones/1x/icons8-serviços-25.png' %}"> Serviços</a>
+            <a href="{% url 'register' %}"><img src="{% static '/assets/ícones/1x/icons8-cadastro-25.png' %}"> Cadastro</a>
+            <a href="{% url 'contato' %}"><img src="{% static '/assets/ícones/1x/icons8-e-mail-25.png' %}"> Contato</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section id="sobre-nos">
+            <h2>Quem Somos</h2>
+            <img src="{% static '/assets/img/logo.jpg' %}" alt="Logo Maestria">
+            <p>Maestria é uma empresa líder em automação residencial, dedicada a transformar casas em ambientes inteligentes e eficientes.</p>
+            <p>Fundada em [ano de fundação], a Maestria começou com o objetivo de proporcionar soluções inovadoras para o cotidiano das pessoas. Ao longo dos anos, nossa equipe cresceu e se especializou em tecnologia de ponta, oferecendo serviços que vão desde a instalação de sistemas de iluminação inteligente até a implementação de segurança residencial avançada.</p>
+            <p>Nosso compromisso com a qualidade e a satisfação do cliente nos tornou uma referência no setor. Acreditamos que cada casa pode ser transformada em um lar inteligente, e estamos aqui para tornar isso uma realidade.</p>
+        </section>
+    </div>
+
+    <footer class="rodape">
+        <div class="rodape__icones">
+            <a href="#" target=”_blank” >
+                <img src="{% static '/assets/ícones/1x/facebook.png' %}" alt="ícone twitter">
+            </a>
+            <a href="#" target=”_blank” >
+                <img src="{% static '/assets/ícones/1x/instagram.png' %}" alt="ícone instagram">
+            </a>
+            <a href="#" target=”_blank” >
+              <img src="{% static '/assets/ícones/1x/icons8-whatsapp-22.png' %}" alt="ícone whatsapp">
+          </a>
+        </div>
+        <p class="rodape__texto">© 2024 Maestria. Todos os direitos reservados</p>
+    </footer>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

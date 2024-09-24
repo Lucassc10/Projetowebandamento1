@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    border: none;
+}
+
+html::-webkit-scrollbar {
+    width: 5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 5rem;
+}
+
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fde3a7d7;
+    padding: 1rem;
+}
+
+.form-image img {
+    width: 31rem;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+    padding: 3rem;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    background-color: #140bc7;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    background-color: #140bc7;
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #140bc7;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #ecebeb1c;
+    font-size: 0.8rem;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #140bc7;
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #f1efefc0;
+}
+
+.input-box input::placeholder {
+    color: #f1efefc0;
+}
+
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 .5rem;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input {
+    margin-right: 0.35rem;
+}
+
+.gender-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #f1efefc0;
+}
+
+.continue-button button {
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #140bc7;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: #140bc7;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-title h6 {
+        margin: 0;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+}
+
+#login-page body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(45deg, #6c63ff, #fde3a7d7);
+}
+#login-page form{
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: #fff;
+}
+#login-page input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+#login-page .logar-button {
+    display: flex;
+    align-items: center;
+}
+
+#login-page .logar-button button {
+    border: none;
+    background-color: #140bc7;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-page .logar-button button:hover {
+    background-color: #140bc7;
+}
+
+#login-page .logar-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+header {
+    background-color: #1c739b;
+    color: white;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #1fb3c7;
+}
+
+.main-content {
+    margin-top: 100px;
+}
+
+.banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+}
+
+main {
+    padding: 20px; /* Adicione preenchimento ao corpo principal da página */
+    margin-top: 20px; /* Espaço entre o cabeçalho e o conteúdo */
+}
+
+form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #333;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Ajustar o conteúdo principal para não sobrepor o cabeçalho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garantir que o corpo ocupe a altura total da tela */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Add more styles as needed */
+
+
+* #cadastro-page {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+#cadastro-page body  {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4242424d;
+}
+
+#cadastro-page .container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+#cadastro-page .form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fde3a7d7;
+    padding: 1rem;
+}
+
+#cadastro-page .form-image img {
+    width: 31rem;
+}
+
+#cadastro-page .form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+    padding: 3rem;
+}
+
+#cadastro-page .form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+#cadastro-page .login-button {
+    display: flex;
+    align-items: center;
+}
+
+#cadastro-page .login-button button {
+    border: none;
+    background-color: #140bc7;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cadastro-page .login-button button:hover {
+    background-color: #140bc7;
+}
+
+#cadastro-page .login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+#cadastro-page .form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #140bc7;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+#cadastro-page .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+#cadastro-page .input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+#cadastro-page .input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #ecebeb1c;
+    font-size: 0.8rem;
+}
+
+#cadastro-page .input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+#cadastro-page .input-box input:focus-visible {
+    outline: 1px solid #140bc7;
+}
+
+#cadastro-page .input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #f1efefc0;
+}
+
+#cadastro-page .input-box input::placeholder {
+    color: #f1efefc0;
+}
+
+#cadastro-page .gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 .5rem;
+}
+
+#cadastro-page .gender-input {
+    display: flex;
+    align-items: center;
+}
+
+#cadastro-page .gender-input input {
+    margin-right: 0.35rem;
+}
+
+#cadastro-page .gender-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #f1efefc0;
+}
+
+#cadastro-page .continue-button button {
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #140bc7;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cadastro-page .continue-button button:hover {
+    background-color: #140bc7;
+}
+
+#cadastro-page .continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-title h6 {
+        margin: 0;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+}
+
+#login-page body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(45deg, #6c63ff, #fde3a7d7);
+}
+#login-page form{
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: #fff;
+}
+#login-page input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+#login-page .logar-button {
+    display: flex;
+    align-items: center;
+}
+
+#login-page .logar-button button {
+    border: none;
+    background-color: #140bc7;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-page .logar-button button:hover {
+    background-color: #140bc7;
+}
+
+#login-page .logar-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
