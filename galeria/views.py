@@ -28,7 +28,10 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             auth_login(request, user)  # Renomeie a função de login para evitar conflito com a view
-            return redirect('index')  # Redireciona para a página 'index' após login
+            if user.is_superuser:
+                return redirect('/admin/')  # Redireciona superusuários para o painel de admin
+            else:
+                return redirect('index')  # Redireciona outros usuários para a página 'index'
         else:
             return render(request, 'galeria/login.html', {'error': 'Usuário ou senha inválidos'})
     else:
@@ -44,7 +47,10 @@ def register(request):
             user = authenticate(username=username, password=raw_password)
             if user is not None:  # Verifica se o usuário foi autenticado
                 auth_login(request, user)  # Chamada correta para a função login do Django
-                return redirect('index')  # Redireciona para a página inicial após login automático
+                if user.is_superuser:
+                    return redirect('/admin/')  # Redireciona o superusuário para o admin
+                else:
+                    return redirect('index')  # Redireciona outros usuários para a página 'index'
     else:
         form = CustomUserCreationForm()
     
